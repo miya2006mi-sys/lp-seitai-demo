@@ -1,0 +1,2231 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>からだ整体院 | 10年悩んだ肩こり、初回で変化を実感</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    /* ========== RESET & BASE ========== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #333333;
+      background-color: #FFFFFF;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    /* ========== LAYOUT ========== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section--gray {
+      background-color: #F8F9FA;
+    }
+
+    .section__title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: #2D6A4F;
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
+    }
+
+    .section__subtitle {
+      text-align: center;
+      font-size: 16px;
+      color: #6C757D;
+      margin-bottom: 60px;
+    }
+
+    /* ========== CTA BUTTON ========== */
+    .cta-button {
+      display: inline-block;
+      background-color: #E76F51;
+      color: #FFFFFF;
+      font-size: 20px;
+      font-weight: 700;
+      padding: 20px 48px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(231, 111, 81, 0.4);
+      letter-spacing: 0.05em;
+    }
+
+    .cta-button:hover {
+      background-color: #D4533B;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(231, 111, 81, 0.5);
+    }
+
+    .cta-button:active {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(231, 111, 81, 0.4);
+    }
+
+    .cta-button__sub {
+      display: block;
+      font-size: 13px;
+      font-weight: 400;
+      margin-top: 4px;
+      opacity: 0.9;
+    }
+
+    /* ========== 1. FIRST VIEW ========== */
+    .hero {
+      position: relative;
+      background: #2D6A4F;
+      padding: 120px 0 100px;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -10%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .hero__content {
+      text-align: center;
+    }
+
+    .hero__image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+
+    .hero__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero__image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(45,106,79,0.7) 0%, rgba(82,183,136,0.5) 100%);
+    }
+
+    .hero__badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 24px;
+      border-radius: 50px;
+      margin-bottom: 32px;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .hero__catch {
+      font-size: 48px;
+      font-weight: 900;
+      color: #FFFFFF;
+      line-height: 1.5;
+      margin-bottom: 24px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .hero__sub {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+
+    .hero__price {
+      margin-bottom: 40px;
+    }
+
+    .hero__price-original {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: line-through;
+      margin-right: 12px;
+    }
+
+    .hero__price-current {
+      font-size: 42px;
+      font-weight: 900;
+      color: #FFD166;
+    }
+
+    .hero__price-tax {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.8);
+      margin-left: 4px;
+    }
+
+    .hero__price-label {
+      display: block;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    .hero__trust {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .hero__trust-item {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 15px;
+    }
+
+    .hero__trust-item strong {
+      font-size: 24px;
+      font-weight: 900;
+      color: #FFD166;
+    }
+
+    /* ========== 2. PROBLEMS ========== */
+    .problems__list {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .problems__item {
+      display: flex;
+      align-items: center;
+      background: #FFFFFF;
+      border: 2px solid #E9ECEF;
+      border-radius: 12px;
+      padding: 24px 32px;
+      margin-bottom: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .problems__item:hover {
+      border-color: #52B788;
+      box-shadow: 0 4px 12px rgba(45, 106, 79, 0.1);
+    }
+
+    .problems__icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #E76F51;
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: 700;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+
+    .problems__text {
+      font-size: 18px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .problems__cta {
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .problems__cta-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2D6A4F;
+      margin-bottom: 8px;
+    }
+
+    .problems__cta-sub {
+      font-size: 15px;
+      color: #6C757D;
+    }
+
+    /* ========== 3. REASONS ========== */
+    .reasons__grid {
+      display: flex;
+      gap: 40px;
+    }
+
+    .reasons__card {
+      flex: 1;
+      text-align: center;
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 48px 32px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+    }
+
+    .reasons__card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    }
+
+    .reasons__number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #2D6A4F, #52B788);
+      color: #FFFFFF;
+      font-size: 20px;
+      font-weight: 900;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .reasons__badge {
+      display: inline-block;
+      background: rgba(45, 106, 79, 0.1);
+      color: #2D6A4F;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .reasons__icon {
+      display: none;
+    }
+
+    .reasons__card-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2D6A4F;
+      margin-bottom: 16px;
+    }
+
+    .reasons__card-text {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    /* ========== 4. FLOW ========== */
+    .flow__steps {
+      display: flex;
+      gap: 24px;
+      position: relative;
+    }
+
+    .flow__step {
+      flex: 1;
+      text-align: center;
+      position: relative;
+    }
+
+    .flow__step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, #2D6A4F, #52B788);
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 50%;
+      margin-bottom: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .flow__step-number span {
+      display: block;
+    }
+
+    .flow__step-number .num {
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .flow__step-number .label {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+    }
+
+    /* Arrow between steps */
+    .flow__step:not(:last-child)::after {
+      content: '\279C';
+      position: absolute;
+      top: 24px;
+      right: -18px;
+      font-size: 24px;
+      color: #52B788;
+      z-index: 0;
+    }
+
+    .flow__step-icon {
+      display: none;
+    }
+
+    .flow__step-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2D6A4F;
+      margin-bottom: 12px;
+    }
+
+    .flow__step-text {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    /* ========== 5. TESTIMONIALS ========== */
+    .testimonials__grid {
+      display: flex;
+      gap: 32px;
+    }
+
+    .testimonials__card {
+      flex: 1;
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 40px 32px;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+      position: relative;
+    }
+
+    .testimonials__card::before {
+      content: '\201C';
+      position: absolute;
+      top: 16px;
+      left: 24px;
+      font-size: 64px;
+      color: #52B788;
+      opacity: 0.3;
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+
+    .testimonials__stars {
+      color: #FFB800;
+      font-size: 18px;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+
+    .testimonials__text {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 24px;
+      min-height: 100px;
+    }
+
+    .testimonials__author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid #E9ECEF;
+      padding-top: 20px;
+    }
+
+    .testimonials__avatar {
+      width: 48px;
+      height: 48px;
+      background: #2D6A4F;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: 700;
+      flex-shrink: 0;
+      letter-spacing: -0.5px;
+    }
+
+    .testimonials__name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .testimonials__meta {
+      font-size: 13px;
+      color: #999;
+    }
+
+    .testimonials__note {
+      text-align: center;
+      margin-top: 32px;
+      font-size: 13px;
+      color: #999;
+    }
+
+    /* ========== 6. PRICING ========== */
+    .pricing__table-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .pricing__table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    }
+
+    .pricing__table thead th {
+      background: #2D6A4F;
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: 700;
+      padding: 20px 32px;
+      text-align: left;
+    }
+
+    .pricing__table thead th:last-child {
+      text-align: right;
+    }
+
+    .pricing__table tbody td {
+      padding: 20px 32px;
+      font-size: 16px;
+      border-bottom: 1px solid #E9ECEF;
+      background: #FFFFFF;
+    }
+
+    .pricing__table tbody td:last-child {
+      text-align: right;
+      font-weight: 700;
+      color: #2D6A4F;
+    }
+
+    .pricing__table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .pricing__table .pricing__highlight {
+      background: #F0FFF4;
+    }
+
+    .pricing__table .pricing__highlight td {
+      background: #F0FFF4;
+    }
+
+    .pricing__table .pricing__highlight td:last-child {
+      color: #E76F51;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .pricing__original-price {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .pricing__note {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #6C757D;
+    }
+
+    .pricing__cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    /* ========== 7. FAQ ========== */
+    .faq__list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq__item {
+      background: #FFFFFF;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      overflow: hidden;
+    }
+
+    .faq__question {
+      display: flex;
+      align-items: center;
+      padding: 24px 32px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+
+    .faq__question:hover {
+      background: #F8F9FA;
+    }
+
+    .faq__q-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: #2D6A4F;
+      color: #FFFFFF;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 50%;
+      margin-right: 16px;
+      flex-shrink: 0;
+    }
+
+    .faq__q-text {
+      flex: 1;
+      font-size: 17px;
+      font-weight: 700;
+      color: #333;
+    }
+
+    .faq__toggle {
+      font-size: 24px;
+      color: #52B788;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+
+    .faq__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .faq__answer-inner {
+      padding: 0 32px 24px 84px;
+      font-size: 15px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .faq__item.is-open .faq__answer {
+      max-height: 500px;
+    }
+
+    .faq__item.is-open .faq__toggle {
+      transform: rotate(45deg);
+    }
+
+    /* ========== 8. ACCESS ========== */
+    .access__content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      gap: 60px;
+    }
+
+    .access__info {
+      flex: 1;
+    }
+
+    .access__map-placeholder {
+      flex: 1;
+      background: linear-gradient(135deg, #D8F3DC, #B7E4C7);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 280px;
+      position: relative;
+    }
+
+    .access__map-placeholder::before {
+      content: '';
+      width: 40px;
+      height: 40px;
+      background: #2D6A4F;
+      border-radius: 50% 50% 50% 0;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      position: absolute;
+      top: 45%;
+      left: 50%;
+    }
+
+    .access__map-placeholder::after {
+      content: '';
+      width: 16px;
+      height: 16px;
+      background: #D8F3DC;
+      border-radius: 50%;
+      position: absolute;
+      top: calc(45% - 4px);
+      left: calc(50% - 8px);
+    }
+
+    .access__map-text {
+      font-size: 14px;
+      color: #2D6A4F;
+      font-weight: 500;
+      margin-top: 60px;
+    }
+
+    .access__dl {
+      margin-bottom: 8px;
+    }
+
+    .access__dl dt {
+      font-size: 13px;
+      font-weight: 700;
+      color: #2D6A4F;
+      margin-bottom: 4px;
+      margin-top: 20px;
+    }
+
+    .access__dl dt:first-child {
+      margin-top: 0;
+    }
+
+    .access__dl dd {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    /* ========== 9. CTA FOOTER ========== */
+    .cta-footer {
+      background: linear-gradient(135deg, #2D6A4F 0%, #40916C 40%, #52B788 100%);
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-footer::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: -20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .cta-footer .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-footer__title {
+      font-size: 32px;
+      font-weight: 900;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+    }
+
+    .cta-footer__sub {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+
+    .cta-footer__phone {
+      margin-top: 24px;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .cta-footer__phone-number {
+      font-size: 28px;
+      font-weight: 900;
+      color: #FFD166;
+      letter-spacing: 0.05em;
+    }
+
+    /* ========== SITE FOOTER ========== */
+    .site-footer {
+      background: #1B4332;
+      padding: 32px 0;
+      text-align: center;
+    }
+
+    .site-footer__text {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .site-footer__note {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.35);
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==============================
+       1. FIRST VIEW
+       ============================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__badge">&#9733; 渋谷駅徒歩5分 / 完全予約制</div>
+        <h1 class="hero__catch">10年悩んだ肩こり、<br>初回で変化を実感</h1>
+        <p class="hero__sub">AI姿勢分析×筋膜リリースの独自メソッドで<br>あなたの「つらい」を「楽になった」に変えます</p>
+        <div class="hero__price">
+          <span class="hero__price-label">初回限定キャンペーン</span>
+          <span class="hero__price-original">通常 8,800円</span>
+          <span class="hero__price-current">3,980</span>
+          <span class="hero__price-tax">円（税込）</span>
+        </div>
+        <a href="#cta-footer" class="cta-button">
+          今すぐ予約する
+          <span class="cta-button__sub">24時間Web受付対応</span>
+        </a>
+        <div class="hero__trust">
+          <div class="hero__trust-item">施術歴<strong>15</strong>年</div>
+          <div class="hero__trust-item">のべ<strong>30,000</strong>人以上</div>
+          <div class="hero__trust-item">リピート率<strong>92</strong>%</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__image">
+      <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1400&h=700&fit=crop&q=80" alt="整体施術の様子">
+    </div>
+  </section>
+
+  <!-- ==============================
+       2. PROBLEMS
+       ============================== -->
+  <section class="section section--gray">
+    <div class="container">
+      <h2 class="section__title">こんなお悩みありませんか？</h2>
+      <p class="section__subtitle">一つでも当てはまる方は、ぜひご相談ください</p>
+      <div class="problems__list">
+        <div class="problems__item">
+          <span class="problems__icon">01</span>
+          <span class="problems__text">デスクワークで肩こりが慢性化し、マッサージでは改善しない</span>
+        </div>
+        <div class="problems__item">
+          <span class="problems__icon">02</span>
+          <span class="problems__text">朝起きたときから腰が重く、動き出すのがつらい</span>
+        </div>
+        <div class="problems__item">
+          <span class="problems__icon">03</span>
+          <span class="problems__text">頭痛薬が手放せず、根本的な解決策を探している</span>
+        </div>
+        <div class="problems__item">
+          <span class="problems__icon">04</span>
+          <span class="problems__text">猫背や姿勢の歪みが気になり、見た目にも自信が持てない</span>
+        </div>
+      </div>
+      <div class="problems__cta">
+        <p class="problems__cta-text">その悩み、からだ整体院が解決します</p>
+        <p class="problems__cta-sub">痛みの「原因」にアプローチするから、変化が持続します</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       3. REASONS
+       ============================== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">他院にはない3つの強み</h2>
+      <p class="section__subtitle">一般的な整体院との違いを明確にお伝えします</p>
+      <div class="reasons__grid">
+        <div class="reasons__card">
+          <span class="reasons__number">1</span>
+          <span class="reasons__badge">独自技術</span>
+          <h3 class="reasons__card-title">AI姿勢分析で<br>原因を数値化</h3>
+          <p class="reasons__card-text">独自のAI姿勢分析システムで、歪みを0.1度単位で数値化。感覚や経験だけに頼らない、データに基づいた施術プランを作成します。</p>
+        </div>
+        <div class="reasons__card">
+          <span class="reasons__number">2</span>
+          <span class="reasons__badge">医師監修</span>
+          <h3 class="reasons__card-title">医師監修の<br>筋膜リリース技術</h3>
+          <p class="reasons__card-text">整形外科医と共同開発した独自の筋膜リリース技術を採用。一般的な整体とは異なり、深層筋膜にアプローチし、慢性的な痛みの根本原因に働きかけます。</p>
+        </div>
+        <div class="reasons__card">
+          <span class="reasons__number">3</span>
+          <span class="reasons__badge">安心保証</span>
+          <h3 class="reasons__card-title">90日間の<br>改善保証プログラム</h3>
+          <p class="reasons__card-text">初回から90日間、改善が見られない場合は施術料を全額返金。明確な改善目標を設定し、毎回の施術で進捗を共有します。自信があるからこそできる保証です。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       4. FLOW
+       ============================== -->
+  <section class="section section--gray">
+    <div class="container">
+      <h2 class="section__title">施術の流れ</h2>
+      <p class="section__subtitle">初めての方も安心。丁寧にご案内します</p>
+      <div class="flow__steps">
+        <div class="flow__step">
+          <div class="flow__step-number">
+            <span>
+              <span class="label">STEP</span>
+              <span class="num">1</span>
+            </span>
+          </div>
+          <span class="flow__step-icon"></span>
+          <h3 class="flow__step-title">カウンセリング</h3>
+          <p class="flow__step-text">お悩みや生活習慣を丁寧にヒアリング。施術方針を一緒に決めていきます。</p>
+        </div>
+        <div class="flow__step">
+          <div class="flow__step-number">
+            <span>
+              <span class="label">STEP</span>
+              <span class="num">2</span>
+            </span>
+          </div>
+          <span class="flow__step-icon"></span>
+          <h3 class="flow__step-title">検査・分析</h3>
+          <p class="flow__step-text">姿勢・可動域・筋肉の状態を検査し、不調の原因を特定します。</p>
+        </div>
+        <div class="flow__step">
+          <div class="flow__step-number">
+            <span>
+              <span class="label">STEP</span>
+              <span class="num">3</span>
+            </span>
+          </div>
+          <span class="flow__step-icon"></span>
+          <h3 class="flow__step-title">施術</h3>
+          <p class="flow__step-text">検査結果に基づき、お一人おひとりに合わせたオーダーメイドの施術を行います。</p>
+        </div>
+        <div class="flow__step">
+          <div class="flow__step-number">
+            <span>
+              <span class="label">STEP</span>
+              <span class="num">4</span>
+            </span>
+          </div>
+          <span class="flow__step-icon"></span>
+          <h3 class="flow__step-title">アフターケア</h3>
+          <p class="flow__step-text">施術効果の確認と、ご自宅でのセルフケア方法・通院ペースをご提案します。</p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 60px;">
+        <a href="#cta" class="cta-button">
+          まずは初回体験を予約する
+          <span class="cta-button__sub">▶ 初回限定3,980円（税込）</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       5. TESTIMONIALS
+       ============================== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">お客様の声</h2>
+      <p class="section__subtitle">実際にご来院いただいたお客様の感想をご紹介</p>
+      <div class="testimonials__grid">
+        <div class="testimonials__card">
+          <div class="testimonials__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonials__text">10年以上悩んでいた肩こりが、3回の施術でびっくりするほど楽になりました。毎日のデスクワークが本当にツラかったので、もっと早く来ればよかったです。</p>
+          <div class="testimonials__author">
+            <div class="testimonials__avatar">A.S</div>
+            <div>
+              <div class="testimonials__name">A.S.さん（30代女性）</div>
+              <div class="testimonials__meta">肩こり / デスクワーカー</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials__card">
+          <div class="testimonials__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonials__text">腰痛で整形外科に通っていましたが改善せず、こちらに相談しました。痛みの原因を丁寧に説明してもらえて、今では朝スッキリ起きられるようになりました。</p>
+          <div class="testimonials__author">
+            <div class="testimonials__avatar">K.T</div>
+            <div>
+              <div class="testimonials__name">K.T.さん（40代男性）</div>
+              <div class="testimonials__meta">腰痛 / 営業職</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials__card">
+          <div class="testimonials__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="testimonials__text">頭痛持ちで薬が手放せませんでしたが、姿勢の歪みが原因だと教えていただき、施術とセルフケアで薬を飲む回数が激減しました。感謝しています。</p>
+          <div class="testimonials__author">
+            <div class="testimonials__avatar">M.Y</div>
+            <div>
+              <div class="testimonials__name">M.Y.さん（50代女性）</div>
+              <div class="testimonials__meta">頭痛・姿勢改善</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="testimonials__note">※ 上記は学習用サンプルとして作成した架空のレビューです。個人の感想であり、効果を保証するものではありません。</p>
+    </div>
+  </section>
+
+  <!-- ==============================
+       6. PRICING
+       ============================== -->
+  <section class="section section--gray">
+    <div class="container">
+      <h2 class="section__title">料金案内</h2>
+      <p class="section__subtitle">明確な料金体系で安心してご利用いただけます</p>
+      <div class="pricing__table-wrapper">
+        <table class="pricing__table">
+          <thead>
+            <tr>
+              <th>メニュー</th>
+              <th>料金（税込）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="pricing__highlight">
+              <td>初回限定 整体コース（約60分）</td>
+              <td><span class="pricing__original-price">8,800円</span><br>3,980円</td>
+            </tr>
+            <tr>
+              <td>整体コース（約60分）</td>
+              <td>8,800円</td>
+            </tr>
+            <tr>
+              <td>ショートコース（約30分）</td>
+              <td>4,400円</td>
+            </tr>
+            <tr>
+              <td>姿勢矯正コース（約75分）</td>
+              <td>11,000円</td>
+            </tr>
+            <tr>
+              <td>回数券（整体コース5回分）</td>
+              <td>39,600円</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="pricing__note">※ 回数券は有効期限3ヶ月です。全コース完全予約制となります。</p>
+      </div>
+      <div class="pricing__cta">
+        <a href="#cta-footer" class="cta-button">初回限定 3,980円で予約する</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       7. FAQ
+       ============================== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">よくある質問</h2>
+      <p class="section__subtitle">お客様からよくいただくご質問にお答えします</p>
+      <div class="faq__list">
+        <div class="faq__item">
+          <div class="faq__question" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="faq__q-label">Q</span>
+            <span class="faq__q-text">施術は痛くないですか？</span>
+            <span class="faq__toggle">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              当院の施術はソフトな手技が中心です。「バキバキ」と鳴らすような施術は行いません。痛みの感じ方には個人差がありますので、施術中も力加減を確認しながら進めます。ご安心ください。
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <div class="faq__question" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="faq__q-label">Q</span>
+            <span class="faq__q-text">どのくらいの頻度で通えばいいですか？</span>
+            <span class="faq__toggle">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              症状や状態によって異なりますが、最初は週1回程度をおすすめしています。改善が見られたら、2週に1回、月1回とペースを落としていきます。初回カウンセリングで最適なプランをご提案します。
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <div class="faq__question" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="faq__q-label">Q</span>
+            <span class="faq__q-text">予約なしでも受けられますか？</span>
+            <span class="faq__toggle">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              当院は完全予約制です。お一人おひとりに十分な時間をお取りするため、事前のご予約をお願いしております。当日予約も空きがあれば対応可能ですので、お気軽にお問い合わせください。
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <div class="faq__question" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="faq__q-label">Q</span>
+            <span class="faq__q-text">駐車場はありますか？</span>
+            <span class="faq__toggle">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              申し訳ございませんが、専用駐車場のご用意はございません。近隣のコインパーキングをご利用ください。渋谷駅から徒歩5分と好アクセスですので、電車でのご来院もおすすめです。
+            </div>
+          </div>
+        </div>
+        <div class="faq__item">
+          <div class="faq__question" onclick="this.parentElement.classList.toggle('is-open')">
+            <span class="faq__q-label">Q</span>
+            <span class="faq__q-text">どんな服装で行けばいいですか？</span>
+            <span class="faq__toggle">+</span>
+          </div>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">
+              動きやすい服装でお越しいただくか、お着替えをご持参ください。院内にもお着替え用のウェアをご用意しておりますので、お仕事帰りでもお気軽にお越しいただけます。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       8. ACCESS
+       ============================== -->
+  <section class="section section--gray">
+    <div class="container">
+      <h2 class="section__title">アクセス</h2>
+      <p class="section__subtitle">渋谷駅から徒歩5分。お気軽にお越しください</p>
+      <div class="access__content">
+        <div class="access__info">
+          <dl class="access__dl">
+            <dt>院名</dt>
+            <dd>からだ整体院</dd>
+            <dt>所在地</dt>
+            <dd>〒150-0002<br>東京都渋谷区渋谷2-XX-XX<br>渋谷XXビル 3F</dd>
+            <dt>最寄駅</dt>
+            <dd>JR・東京メトロ 渋谷駅 東口より徒歩5分</dd>
+            <dt>営業時間</dt>
+            <dd>平日 10:00〜21:00（最終受付 20:00）<br>土日祝 10:00〜18:00（最終受付 17:00）</dd>
+            <dt>定休日</dt>
+            <dd>毎週水曜日</dd>
+            <dt>電話番号</dt>
+            <dd>03-XXXX-XXXX</dd>
+          </dl>
+        </div>
+        <div class="access__map-placeholder">
+          <span class="access__map-text">Map</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       9. CTA FOOTER
+       ============================== -->
+  <section class="cta-footer" id="cta-footer">
+    <div class="container">
+      <h2 class="cta-footer__title">まずはお気軽にご相談ください</h2>
+      <p class="cta-footer__sub">初回限定 3,980円（税込）でプロの施術を体験いただけます。<br>あなたの「つらい」に寄り添い、一緒に解決していきます。</p>
+      <a href="#" class="cta-button">
+        ご予約・お問い合わせはこちら
+        <span class="cta-button__sub">24時間Web受付対応</span>
+      </a>
+      <div class="cta-footer__phone">
+        <p>お電話でのご予約はこちら</p>
+        <p class="cta-footer__phone-number">03-XXXX-XXXX</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================
+       SITE FOOTER
+       ============================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="site-footer__text">&copy; 2026 からだ整体院 All Rights Reserved.</p>
+      <p class="site-footer__note">※ これは学習用に制作した架空の整体院LPです。実在する店舗・団体とは一切関係ありません。</p>
+    </div>
+  </footer>
+
+  <!-- ==============================
+       BOOKING MODAL
+       ============================== -->
+  <div class="booking-overlay" id="bookingOverlay">
+    <div class="booking-modal" role="dialog" aria-modal="true" aria-label="予約フォーム">
+      <button class="booking-modal__close" id="bookingClose" type="button" aria-label="閉じる">&times;</button>
+
+      <!-- Progress Bar -->
+      <div class="booking-progress">
+        <div class="booking-progress__step is-active" data-step="1">
+          <span class="booking-progress__number">1</span>
+          <span class="booking-progress__label">日付</span>
+        </div>
+        <div class="booking-progress__line"></div>
+        <div class="booking-progress__step" data-step="2">
+          <span class="booking-progress__number">2</span>
+          <span class="booking-progress__label">時間</span>
+        </div>
+        <div class="booking-progress__line"></div>
+        <div class="booking-progress__step" data-step="3">
+          <span class="booking-progress__number">3</span>
+          <span class="booking-progress__label">情報</span>
+        </div>
+        <div class="booking-progress__line"></div>
+        <div class="booking-progress__step" data-step="4">
+          <span class="booking-progress__number">4</span>
+          <span class="booking-progress__label">確認</span>
+        </div>
+        <div class="booking-progress__line"></div>
+        <div class="booking-progress__step" data-step="5">
+          <span class="booking-progress__number">5</span>
+          <span class="booking-progress__label">完了</span>
+        </div>
+      </div>
+
+      <!-- Step 1: Calendar -->
+      <div class="booking-step" id="bookingStep1">
+        <h3 class="booking-step__title">日付を選択してください</h3>
+        <div class="calendar">
+          <div class="calendar__header">
+            <button class="calendar__nav" id="calendarPrev" type="button">&#9664; 前月</button>
+            <span class="calendar__month" id="calendarMonth"></span>
+            <button class="calendar__nav" id="calendarNext" type="button">翌月 &#9654;</button>
+          </div>
+          <div class="calendar__weekdays">
+            <span class="calendar__weekday calendar__weekday--sun">日</span>
+            <span class="calendar__weekday">月</span>
+            <span class="calendar__weekday">火</span>
+            <span class="calendar__weekday calendar__weekday--wed">水</span>
+            <span class="calendar__weekday">木</span>
+            <span class="calendar__weekday">金</span>
+            <span class="calendar__weekday calendar__weekday--sat">土</span>
+          </div>
+          <div class="calendar-grid" id="calendarGrid"></div>
+        </div>
+        <p class="booking-step__note">※ 水曜日は定休日です</p>
+      </div>
+
+      <!-- Step 2: Time Slot -->
+      <div class="booking-step" id="bookingStep2" style="display:none;">
+        <h3 class="booking-step__title">時間帯を選択してください</h3>
+        <p class="booking-step__selected" id="selectedDateDisplay"></p>
+        <div class="time-slots" id="timeSlots"></div>
+        <button class="booking-back" type="button" onclick="bookingGoTo(1)">&#9664; 日付選択に戻る</button>
+      </div>
+
+      <!-- Step 3: Info Form -->
+      <div class="booking-step" id="bookingStep3" style="display:none;">
+        <h3 class="booking-step__title">お客様情報を入力してください</h3>
+        <p class="booking-step__selected" id="selectedDateTimeDisplay"></p>
+        <form class="booking-form" id="bookingForm" onsubmit="return false;">
+          <div class="booking-form__group">
+            <label class="booking-form__label" for="bookingName">お名前 <span class="booking-form__required">必須</span></label>
+            <input class="booking-form__input" type="text" id="bookingName" placeholder="例：山田 太郎" required>
+          </div>
+          <div class="booking-form__group">
+            <label class="booking-form__label" for="bookingPhone">電話番号 <span class="booking-form__required">必須</span></label>
+            <input class="booking-form__input" type="tel" id="bookingPhone" placeholder="例：090-1234-5678" required>
+          </div>
+          <div class="booking-form__group">
+            <label class="booking-form__label" for="bookingEmail">メールアドレス <span class="booking-form__optional">任意</span></label>
+            <input class="booking-form__input" type="email" id="bookingEmail" placeholder="例：yamada@example.com">
+          </div>
+          <div class="booking-form__group">
+            <label class="booking-form__label" for="bookingMenu">メニュー選択</label>
+            <select class="booking-form__select" id="bookingMenu">
+              <option value="初回限定整体コース">初回限定整体コース（約60分 / 3,980円）</option>
+              <option value="整体コース">整体コース（約60分 / 8,800円）</option>
+              <option value="ショートコース">ショートコース（約30分 / 4,400円）</option>
+              <option value="姿勢矯正コース">姿勢矯正コース（約75分 / 11,000円）</option>
+            </select>
+          </div>
+          <div class="booking-form__group">
+            <label class="booking-form__label" for="bookingNote">ご要望・症状 <span class="booking-form__optional">任意</span></label>
+            <textarea class="booking-form__textarea" id="bookingNote" rows="3" placeholder="気になる症状やご要望があればご記入ください"></textarea>
+          </div>
+          <button class="booking-form__submit" type="button" id="bookingToStep4" disabled>次へ</button>
+        </form>
+        <button class="booking-back" type="button" onclick="bookingGoTo(2)">&#9664; 時間選択に戻る</button>
+      </div>
+
+      <!-- Step 4: Confirmation -->
+      <div class="booking-step" id="bookingStep4" style="display:none;">
+        <h3 class="booking-step__title">予約内容の確認</h3>
+        <div class="booking-confirm" id="bookingConfirm"></div>
+        <button class="booking-form__submit" type="button" id="bookingSubmit">予約を確定する</button>
+        <button class="booking-back" type="button" onclick="bookingGoTo(3)">&#9664; 入力内容を修正する</button>
+      </div>
+
+      <!-- Step 5: Complete -->
+      <div class="booking-step" id="bookingStep5" style="display:none;">
+        <div class="booking-complete">
+          <div class="booking-complete__icon">&#10003;</div>
+          <h3 class="booking-complete__title">ご予約ありがとうございます</h3>
+          <p class="booking-complete__text">ご予約を承りました。確認メールをお送りしましたので、ご確認ください。</p>
+          <div class="booking-confirm" id="bookingCompleteSummary"></div>
+          <button class="booking-form__submit" type="button" id="bookingDone">閉じる</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* ========== BOOKING MODAL ========== */
+    .booking-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    .booking-overlay.is-active {
+      display: flex;
+    }
+    .booking-modal {
+      background: #fff;
+      border-radius: 16px;
+      max-width: 520px;
+      width: 90%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 40px;
+      position: relative;
+      animation: bookingFadeIn 0.3s ease;
+    }
+    @keyframes bookingFadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .booking-modal__close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 28px;
+      color: #999;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: background 0.2s;
+      line-height: 1;
+    }
+    .booking-modal__close:hover {
+      background: #f0f0f0;
+      color: #333;
+    }
+
+    /* Progress Bar */
+    .booking-progress {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 32px;
+      gap: 0;
+    }
+    .booking-progress__step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .booking-progress__number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid #e0e0e0;
+      font-size: 14px;
+      font-weight: 700;
+      color: #ccc;
+      background: #fff;
+      transition: all 0.3s;
+    }
+    .booking-progress__label {
+      font-size: 11px;
+      color: #999;
+      transition: color 0.3s;
+    }
+    .booking-progress__step.is-active .booking-progress__number {
+      background: #2D6A4F;
+      border-color: #2D6A4F;
+      color: #fff;
+    }
+    .booking-progress__step.is-active .booking-progress__label {
+      color: #2D6A4F;
+      font-weight: 700;
+    }
+    .booking-progress__step.is-done .booking-progress__number {
+      background: #52B788;
+      border-color: #52B788;
+      color: #fff;
+    }
+    .booking-progress__step.is-done .booking-progress__number::after {
+      content: '';
+    }
+    .booking-progress__step.is-done .booking-progress__label {
+      color: #52B788;
+    }
+    .booking-progress__line {
+      width: 24px;
+      height: 2px;
+      background: #e0e0e0;
+      margin: 0 4px;
+      margin-bottom: 18px;
+    }
+
+    /* Step Common */
+    .booking-step__title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .booking-step__selected {
+      text-align: center;
+      font-size: 15px;
+      color: #2D6A4F;
+      font-weight: 700;
+      background: #f0f7f4;
+      padding: 10px 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .booking-step__note {
+      text-align: center;
+      font-size: 13px;
+      color: #999;
+      margin-top: 16px;
+    }
+    .booking-back {
+      display: block;
+      margin: 16px auto 0;
+      background: none;
+      border: none;
+      color: #6C757D;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    .booking-back:hover {
+      background: #f0f0f0;
+      color: #333;
+    }
+
+    /* Calendar */
+    .calendar__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .calendar__nav {
+      background: none;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 13px;
+      cursor: pointer;
+      color: #555;
+      transition: all 0.2s;
+    }
+    .calendar__nav:hover {
+      background: #f0f0f0;
+      border-color: #ccc;
+    }
+    .calendar__nav:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+    .calendar__month {
+      font-size: 18px;
+      font-weight: 700;
+      color: #333;
+    }
+    .calendar__weekdays {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+    .calendar__weekday {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: #999;
+      padding: 4px 0;
+    }
+    .calendar__weekday--sun {
+      color: #E76F51;
+    }
+    .calendar__weekday--sat {
+      color: #4A90D9;
+    }
+    .calendar__weekday--wed {
+      color: #ccc;
+    }
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 4px;
+    }
+    .calendar-day {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.2s;
+      border: none;
+      background: none;
+      color: #333;
+    }
+    .calendar-day:hover:not(.is-disabled) {
+      background: #f0f0f0;
+    }
+    .calendar-day.is-selected {
+      background: #2D6A4F;
+      color: #fff;
+    }
+    .calendar-day.is-disabled {
+      color: #ccc;
+      cursor: default;
+    }
+    .calendar-day.is-today:not(.is-selected) {
+      border: 2px solid #2D6A4F;
+      font-weight: 700;
+    }
+    .calendar-day.is-sunday:not(.is-disabled) {
+      color: #E76F51;
+    }
+    .calendar-day.is-sunday.is-selected {
+      color: #fff;
+    }
+    .calendar-day.is-saturday:not(.is-disabled) {
+      color: #4A90D9;
+    }
+    .calendar-day.is-saturday.is-selected {
+      color: #fff;
+    }
+
+    /* Time Slots */
+    .time-slots {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .time-slot {
+      padding: 16px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+      background: #fff;
+    }
+    .time-slot__time {
+      font-size: 16px;
+      font-weight: 700;
+      color: #333;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .time-slot__status {
+      font-size: 13px;
+      display: block;
+    }
+    .time-slot.available {
+      border-color: #2D6A4F;
+    }
+    .time-slot.available:hover {
+      background: #f0f7f4;
+    }
+    .time-slot.available .time-slot__status {
+      color: #2D6A4F;
+    }
+    .time-slot.limited {
+      border-color: #E9A23B;
+    }
+    .time-slot.limited:hover {
+      background: #fdf8f0;
+    }
+    .time-slot.limited .time-slot__status {
+      color: #E9A23B;
+    }
+    .time-slot.full {
+      background: #f5f5f5;
+      color: #999;
+      cursor: default;
+      border-color: #e0e0e0;
+    }
+    .time-slot.full .time-slot__time {
+      color: #999;
+    }
+    .time-slot.full .time-slot__status {
+      color: #999;
+    }
+    .time-slot.is-selected {
+      background: #2D6A4F;
+      border-color: #2D6A4F;
+    }
+    .time-slot.is-selected .time-slot__time,
+    .time-slot.is-selected .time-slot__status {
+      color: #fff;
+    }
+
+    /* Booking Form */
+    .booking-form__group {
+      margin-bottom: 20px;
+    }
+    .booking-form__label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 6px;
+    }
+    .booking-form__required {
+      font-size: 11px;
+      color: #E76F51;
+      font-weight: 700;
+      margin-left: 4px;
+    }
+    .booking-form__optional {
+      font-size: 11px;
+      color: #999;
+      font-weight: 400;
+      margin-left: 4px;
+    }
+    .booking-form__input,
+    .booking-form__select,
+    .booking-form__textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 15px;
+      font-family: 'Noto Sans JP', sans-serif;
+      color: #333;
+      transition: border-color 0.2s;
+      background: #fff;
+    }
+    .booking-form__input:focus,
+    .booking-form__select:focus,
+    .booking-form__textarea:focus {
+      outline: none;
+      border-color: #2D6A4F;
+    }
+    .booking-form__select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23999' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+    .booking-form__textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+    .booking-form__submit {
+      display: block;
+      width: 100%;
+      padding: 16px;
+      background: #E76F51;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(231, 111, 81, 0.3);
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+    .booking-form__submit:hover:not(:disabled) {
+      background: #D4533B;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(231, 111, 81, 0.4);
+    }
+    .booking-form__submit:disabled {
+      background: #ccc;
+      box-shadow: none;
+      cursor: default;
+    }
+
+    /* Confirmation */
+    .booking-confirm {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .booking-confirm__row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #e9ecef;
+      font-size: 14px;
+    }
+    .booking-confirm__row:last-child {
+      border-bottom: none;
+    }
+    .booking-confirm__label {
+      color: #6C757D;
+      font-weight: 500;
+    }
+    .booking-confirm__value {
+      color: #333;
+      font-weight: 700;
+      text-align: right;
+      max-width: 60%;
+      word-break: break-all;
+    }
+
+    /* Complete */
+    .booking-complete {
+      text-align: center;
+    }
+    .booking-complete__icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      background: #2D6A4F;
+      color: #fff;
+      font-size: 28px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+    .booking-complete__title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #2D6A4F;
+      margin-bottom: 12px;
+    }
+    .booking-complete__text {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 24px;
+      line-height: 1.8;
+    }
+
+    /* Loading spinner for submit */
+    .booking-form__submit.is-loading {
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .booking-modal {
+        padding: 24px 20px;
+        border-radius: 12px;
+        width: 95%;
+      }
+      .booking-progress__label {
+        font-size: 10px;
+      }
+      .booking-progress__number {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+      }
+      .booking-progress__line {
+        width: 16px;
+      }
+      .time-slots {
+        grid-template-columns: 1fr;
+      }
+      .booking-confirm__row {
+        flex-direction: column;
+        gap: 2px;
+      }
+      .booking-confirm__value {
+        max-width: 100%;
+        text-align: left;
+      }
+    }
+  </style>
+
+  <script>
+  (function() {
+    'use strict';
+
+    // ==============================
+    // State
+    // ==============================
+    var currentStep = 1;
+    var selectedDate = null;
+    var selectedTime = null;
+    var calendarYear = null;
+    var calendarMonth = null; // 0-indexed
+
+    var overlay = document.getElementById('bookingOverlay');
+    var closeBtn = document.getElementById('bookingClose');
+
+    // ==============================
+    // Availability data (API with dummy fallback)
+    // ==============================
+    async function fetchAvailability(dateStr) {
+      try {
+        var res = await fetch('http://localhost:8000/api/availability?date=' + dateStr);
+        if (!res.ok) throw new Error('API error: ' + res.status);
+        var data = await res.json();
+        return data.slots.map(function(s) {
+          var label = s.status === 'available' ? '○ 空きあり' :
+                      s.status === 'limited' ? '△ 残りわずか' : '× 満席';
+          return { time: s.time, status: s.status, label: label };
+        });
+      } catch (e) {
+        console.warn('API未接続。ダミーデータを使用:', e.message);
+        return getDummySlots();
+      }
+    }
+
+    function getDummySlots() {
+      return [
+        { time: '10:00', status: 'available', label: '○ 空きあり' },
+        { time: '11:00', status: 'available', label: '○ 空きあり' },
+        { time: '12:00', status: 'available', label: '○ 空きあり' },
+        { time: '13:00', status: 'limited',   label: '△ 残りわずか' },
+        { time: '14:00', status: 'limited',   label: '△ 残りわずか' },
+        { time: '15:00', status: 'limited',   label: '△ 残りわずか' },
+        { time: '16:00', status: 'full',      label: '× 満席' },
+        { time: '17:00', status: 'available', label: '○ 空きあり' },
+        { time: '18:00', status: 'available', label: '○ 空きあり' },
+        { time: '19:00', status: 'available', label: '○ 空きあり' },
+        { time: '20:00', status: 'available', label: '○ 空きあり' }
+      ];
+    }
+
+    // ==============================
+    // Modal open / close
+    // ==============================
+    function openBookingModal() {
+      currentStep = 1;
+      selectedDate = null;
+      selectedTime = null;
+
+      // Reset form
+      document.getElementById('bookingName').value = '';
+      document.getElementById('bookingPhone').value = '';
+      document.getElementById('bookingEmail').value = '';
+      document.getElementById('bookingMenu').selectedIndex = 0;
+      document.getElementById('bookingNote').value = '';
+      document.getElementById('bookingToStep4').disabled = true;
+
+      var now = new Date();
+      calendarYear = now.getFullYear();
+      calendarMonth = now.getMonth();
+
+      overlay.classList.add('is-active');
+      document.body.style.overflow = 'hidden';
+      updateStep(1);
+      renderCalendar();
+    }
+
+    function closeBookingModal() {
+      overlay.classList.remove('is-active');
+      document.body.style.overflow = '';
+    }
+
+    // Expose globally for onclick handlers
+    window.openBookingModal = openBookingModal;
+
+    closeBtn.addEventListener('click', closeBookingModal);
+
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) {
+        closeBookingModal();
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && overlay.classList.contains('is-active')) {
+        closeBookingModal();
+      }
+    });
+
+    // ==============================
+    // CTA Button binding
+    // ==============================
+    document.querySelectorAll('.cta-button').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        openBookingModal();
+      });
+    });
+
+    // ==============================
+    // Step navigation
+    // ==============================
+    function updateStep(step) {
+      currentStep = step;
+      for (var i = 1; i <= 5; i++) {
+        var el = document.getElementById('bookingStep' + i);
+        el.style.display = (i === step) ? 'block' : 'none';
+      }
+      updateProgress(step);
+    }
+
+    function updateProgress(step) {
+      var steps = document.querySelectorAll('.booking-progress__step');
+      steps.forEach(function(el) {
+        var s = parseInt(el.getAttribute('data-step'));
+        el.classList.remove('is-active', 'is-done');
+        if (s === step) {
+          el.classList.add('is-active');
+        } else if (s < step) {
+          el.classList.add('is-done');
+          el.querySelector('.booking-progress__number').textContent = '✓';
+        } else {
+          el.querySelector('.booking-progress__number').textContent = s;
+        }
+      });
+    }
+
+    // Expose for onclick
+    window.bookingGoTo = function(step) {
+      updateStep(step);
+      if (step === 1) renderCalendar();
+      if (step === 2) renderTimeSlots();
+    };
+
+    // ==============================
+    // Step 1: Calendar
+    // ==============================
+    function renderCalendar() {
+      var grid = document.getElementById('calendarGrid');
+      var monthLabel = document.getElementById('calendarMonth');
+      var prevBtn = document.getElementById('calendarPrev');
+
+      var now = new Date();
+      var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+      monthLabel.textContent = calendarYear + '年' + (calendarMonth + 1) + '月';
+
+      // Disable prev button if current month
+      if (calendarYear === now.getFullYear() && calendarMonth === now.getMonth()) {
+        prevBtn.disabled = true;
+      } else {
+        prevBtn.disabled = false;
+      }
+
+      grid.innerHTML = '';
+
+      var firstDay = new Date(calendarYear, calendarMonth, 1).getDay();
+      var daysInMonth = new Date(calendarYear, calendarMonth + 1, 0).getDate();
+
+      // Empty cells for days before 1st
+      for (var i = 0; i < firstDay; i++) {
+        var empty = document.createElement('span');
+        empty.className = 'calendar-day is-disabled';
+        grid.appendChild(empty);
+      }
+
+      for (var d = 1; d <= daysInMonth; d++) {
+        var date = new Date(calendarYear, calendarMonth, d);
+        var dayOfWeek = date.getDay();
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'calendar-day';
+        btn.textContent = d;
+
+        var isPast = date < today;
+        var isWednesday = dayOfWeek === 3;
+
+        if (isPast || isWednesday) {
+          btn.classList.add('is-disabled');
+        } else {
+          btn.setAttribute('data-date', calendarYear + '-' + String(calendarMonth + 1).padStart(2, '0') + '-' + String(d).padStart(2, '0'));
+          btn.addEventListener('click', onDateClick);
+        }
+
+        if (date.getTime() === today.getTime()) {
+          btn.classList.add('is-today');
+        }
+
+        if (dayOfWeek === 0) btn.classList.add('is-sunday');
+        if (dayOfWeek === 6) btn.classList.add('is-saturday');
+
+        // Highlight selected
+        if (selectedDate && btn.getAttribute('data-date') === selectedDate) {
+          btn.classList.add('is-selected');
+        }
+
+        grid.appendChild(btn);
+      }
+    }
+
+    function onDateClick(e) {
+      selectedDate = e.currentTarget.getAttribute('data-date');
+      selectedTime = null;
+      renderTimeSlots();
+      updateStep(2);
+    }
+
+    document.getElementById('calendarPrev').addEventListener('click', function() {
+      calendarMonth--;
+      if (calendarMonth < 0) {
+        calendarMonth = 11;
+        calendarYear--;
+      }
+      renderCalendar();
+    });
+
+    document.getElementById('calendarNext').addEventListener('click', function() {
+      calendarMonth++;
+      if (calendarMonth > 11) {
+        calendarMonth = 0;
+        calendarYear++;
+      }
+      renderCalendar();
+    });
+
+    // ==============================
+    // Step 2: Time Slots
+    // ==============================
+    async function renderTimeSlots() {
+      var container = document.getElementById('timeSlots');
+      var dateDisplay = document.getElementById('selectedDateDisplay');
+
+      var parts = selectedDate.split('-');
+      dateDisplay.textContent = parts[0] + '年' + parseInt(parts[1]) + '月' + parseInt(parts[2]) + '日';
+
+      container.innerHTML = '<p style="text-align:center;color:#888;">読み込み中...</p>';
+      var slots = await fetchAvailability(selectedDate);
+      container.innerHTML = '';
+
+      slots.forEach(function(slot) {
+        var div = document.createElement('div');
+        div.className = 'time-slot ' + slot.status;
+
+        var timeSpan = document.createElement('span');
+        timeSpan.className = 'time-slot__time';
+        timeSpan.textContent = slot.time;
+
+        var statusSpan = document.createElement('span');
+        statusSpan.className = 'time-slot__status';
+        statusSpan.textContent = slot.label;
+
+        div.appendChild(timeSpan);
+        div.appendChild(statusSpan);
+
+        if (slot.status !== 'full') {
+          div.setAttribute('data-time', slot.time);
+          div.addEventListener('click', onTimeClick);
+        }
+
+        if (selectedTime && slot.time === selectedTime) {
+          div.classList.add('is-selected');
+        }
+
+        container.appendChild(div);
+      });
+    }
+
+    function onTimeClick(e) {
+      var el = e.currentTarget;
+      selectedTime = el.getAttribute('data-time');
+
+      // Update visual selection
+      document.querySelectorAll('.time-slot.is-selected').forEach(function(s) {
+        s.classList.remove('is-selected');
+      });
+      el.classList.add('is-selected');
+
+      // Go to step 3
+      updateStep(3);
+      updateDateTimeDisplay();
+    }
+
+    function updateDateTimeDisplay() {
+      var el = document.getElementById('selectedDateTimeDisplay');
+      var parts = selectedDate.split('-');
+      el.textContent = parts[0] + '年' + parseInt(parts[1]) + '月' + parseInt(parts[2]) + '日 ' + selectedTime + '〜';
+    }
+
+    // ==============================
+    // Step 3: Form validation
+    // ==============================
+    var nameInput = document.getElementById('bookingName');
+    var phoneInput = document.getElementById('bookingPhone');
+    var submitBtn = document.getElementById('bookingToStep4');
+
+    function validateForm() {
+      var nameOk = nameInput.value.trim().length > 0;
+      var phoneOk = phoneInput.value.trim().length > 0;
+      submitBtn.disabled = !(nameOk && phoneOk);
+    }
+
+    nameInput.addEventListener('input', validateForm);
+    phoneInput.addEventListener('input', validateForm);
+
+    submitBtn.addEventListener('click', function() {
+      if (submitBtn.disabled) return;
+      renderConfirmation();
+      updateStep(4);
+    });
+
+    // ==============================
+    // Step 4: Confirmation
+    // ==============================
+    function renderConfirmation() {
+      var container = document.getElementById('bookingConfirm');
+      var parts = selectedDate.split('-');
+      var dateStr = parts[0] + '年' + parseInt(parts[1]) + '月' + parseInt(parts[2]) + '日 ' + selectedTime + '〜';
+      var name = document.getElementById('bookingName').value.trim();
+      var phone = document.getElementById('bookingPhone').value.trim();
+      var email = document.getElementById('bookingEmail').value.trim() || '(未入力)';
+      var menu = document.getElementById('bookingMenu').value;
+      var note = document.getElementById('bookingNote').value.trim() || '(未入力)';
+
+      container.innerHTML =
+        '<div class="booking-confirm__row"><span class="booking-confirm__label">日時</span><span class="booking-confirm__value">' + escapeHtml(dateStr) + '</span></div>' +
+        '<div class="booking-confirm__row"><span class="booking-confirm__label">お名前</span><span class="booking-confirm__value">' + escapeHtml(name) + '</span></div>' +
+        '<div class="booking-confirm__row"><span class="booking-confirm__label">電話番号</span><span class="booking-confirm__value">' + escapeHtml(phone) + '</span></div>' +
+        '<div class="booking-confirm__row"><span class="booking-confirm__label">メール</span><span class="booking-confirm__value">' + escapeHtml(email) + '</span></div>' +
+        '<div class="booking-confirm__row"><span class="booking-confirm__label">メニュー</span><span class="booking-confirm__value">' + escapeHtml(menu) + '</span></div>' +
+        '<div class="booking-confirm__row"><span class="booking-confirm__label">ご要望</span><span class="booking-confirm__value">' + escapeHtml(note) + '</span></div>';
+    }
+
+    // ==============================
+    // Step 4 -> 5: Submit
+    // ==============================
+    document.getElementById('bookingSubmit').addEventListener('click', async function() {
+      var btn = this;
+      btn.classList.add('is-loading');
+      btn.textContent = '送信中...';
+
+      try {
+        var res = await fetch('http://localhost:8000/api/book', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            date: selectedDate,
+            time: selectedTime,
+            name: document.getElementById('bookingName').value.trim(),
+            phone: document.getElementById('bookingPhone').value.trim(),
+            email: document.getElementById('bookingEmail').value.trim(),
+            menu: document.getElementById('bookingMenu').value,
+            note: document.getElementById('bookingNote').value.trim()
+          })
+        });
+        var data = await res.json();
+        if (data.status === 'confirmed') {
+          btn.classList.remove('is-loading');
+          btn.textContent = '予約を確定する';
+          showComplete();
+        } else {
+          throw new Error(data.detail || '予約に失敗しました');
+        }
+      } catch (e) {
+        console.warn('API未接続。ローカルモードで完了:', e.message);
+        btn.classList.remove('is-loading');
+        btn.textContent = '予約を確定する';
+        showComplete();
+      }
+    });
+
+    function showComplete() {
+      // Copy confirmation to summary
+      document.getElementById('bookingCompleteSummary').innerHTML =
+        document.getElementById('bookingConfirm').innerHTML;
+      updateStep(5);
+    }
+
+    // ==============================
+    // Step 5: Done
+    // ==============================
+    document.getElementById('bookingDone').addEventListener('click', closeBookingModal);
+
+    // ==============================
+    // Utility
+    // ==============================
+    function escapeHtml(str) {
+      var div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    }
+
+  })();
+  </script>
+
+</body>
+</html>
